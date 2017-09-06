@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IHero} from '../../models/hero';
+import { IHero } from '../../models/hero';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'Tour of Heroes';
   selectedHeroValue: string;
 
-  selectedHero(event){
-    this.selectedHeroValue = event; 
+  selectedHero(event) {
+    this.selectedHeroValue = event;
   }
 }

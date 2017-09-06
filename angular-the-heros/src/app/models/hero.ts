@@ -1,4 +1,4 @@
-export class IHero{
+export class IHero {
     name: string;
     id: number;
 }
