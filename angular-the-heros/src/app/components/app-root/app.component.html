@@ -3,6 +3,11 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <heroes (selectedHeroValue)="selectedHero($event)"></heroes>
-  <hero-details [hero]="selectedHeroValue"></hero-details>
+  <!-- <heroes (selectedHeroValue)="selectedHero($event)"></heroes> -->
+  <nav>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <!-- <hero-details [hero]="selectedHeroValue"></hero-details> -->
 </div>
