@@ -1,0 +1,14 @@
+mat-card {
+  transition: none !important;
+  box-shadow: none !important;
+}
+
+.weather-info {
+  width: 100%;
+  float: left;
+  > mat-card-content {
+    width: 10%;
+    position: relative;
+    float: left;
+  }
+}

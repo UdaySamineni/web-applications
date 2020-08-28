@@ -1,0 +1,41 @@
+<form>
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <div>
+    <h2>City</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Select City</mat-label>
+      <mat-select (selectionChange)="getWeatherForecastByCity($event.value)">
+        <mat-option *ngFor="let city of cities" [value]="city">
+          {{city}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-card class="weather-info">
+      <mat-card-content *ngFor="let data of weatherInfo?.data">
+        <mat-card-subtitle>{{data.day}}</mat-card-subtitle>
+        <mat-card-subtitle>{{data.date}}</mat-card-subtitle>
+        <div>
+          <div>
+            <img src="{{data.weather.icon}}" />
+            <div>{{data.weather.description}}</div>
+          </div>
+          <div>
+            <span>{{data.temp}} C</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div>
+    <button type="button" mat-raised-button color="warn" [disabled]="selectedCity === ''"
+      (click)="getWeatherForecastByCity(selectedCity)">Apply</button>
+  </div>
+</form>
