@@ -1,2 +1,2 @@
-# web-sample-projects
-This repository contains different web related sample applications. 
+# Web Applications
+The repository maintains sample web applications. 
